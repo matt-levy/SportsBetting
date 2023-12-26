@@ -17,6 +17,7 @@
 		F4B0D3ED2B3A403D00B34CAA /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B0D3EC2B3A403D00B34CAA /* Functions.swift */; };
 		F4B0D3EF2B3A457C00B34CAA /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B0D3EE2B3A457C00B34CAA /* SettingsView.swift */; };
 		F4B0D3F12B3A544A00B34CAA /* AppearanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B0D3F02B3A544A00B34CAA /* AppearanceManager.swift */; };
+		F4B0D3F42B3A5CD400B34CAA /* ENV.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4B0D3F32B3A5CD400B34CAA /* ENV.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		F4B0D3EC2B3A403D00B34CAA /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		F4B0D3EE2B3A457C00B34CAA /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		F4B0D3F02B3A544A00B34CAA /* AppearanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceManager.swift; sourceTree = "<group>"; };
+		F4B0D3F22B3A5C4800B34CAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F4B0D3F32B3A5CD400B34CAA /* ENV.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ENV.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,7 @@
 		F42AFF952B26C5870028E14D /* SportsBetting */ = {
 			isa = PBXGroup;
 			children = (
+				F4B0D3F22B3A5C4800B34CAA /* Info.plist */,
 				F4B0D3EC2B3A403D00B34CAA /* Functions.swift */,
 				F42AFFAF2B26C8AA0028E14D /* ContentView.swift */,
 				F42AFFB12B26C8B40028E14D /* HomeView.swift */,
@@ -75,6 +79,7 @@
 				F42AFF9C2B26C5890028E14D /* SportsBetting.entitlements */,
 				F42AFF9D2B26C5890028E14D /* Preview Content */,
 				F4B0D3F02B3A544A00B34CAA /* AppearanceManager.swift */,
+				F4B0D3F32B3A5CD400B34CAA /* ENV.plist */,
 			);
 			path = SportsBetting;
 			sourceTree = "<group>";
@@ -146,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F42AFF9F2B26C5890028E14D /* Preview Assets.xcassets in Resources */,
+				F4B0D3F42B3A5CD400B34CAA /* ENV.plist in Resources */,
 				F42AFF9B2B26C5890028E14D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,6 +297,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SportsBetting/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SportsBetting/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -327,6 +334,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SportsBetting/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SportsBetting/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

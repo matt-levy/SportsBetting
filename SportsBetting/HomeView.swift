@@ -23,6 +23,11 @@ struct HomeView: View {
         return dateFormatter.string(from: date)
     }
     
+    func getApiKey() -> String {
+        let envContents = Bundle.main.path(forResource: "ENV", ofType: "plist")
+        let dict = NSDictionary(contentsOfFile: envContents ?? "")
+        return dict?.object(forKey: "API_KEY") as! String
+    }
     
     var body: some View {
         NavigationView {
@@ -77,7 +82,7 @@ struct HomeView: View {
     func fetchData() {
         
         print("Starting Fetch ToDos")
-        let API_KEY = "0dc43c2b159a9a895f510afd0d163eb0"
+        let API_KEY = getApiKey()
         let BASE_URL = "https://api.the-odds-api.com/v4/sports/\(sportSelection)/odds/"
         let REGIONS = "us"
         let MARKETS = "h2h"
