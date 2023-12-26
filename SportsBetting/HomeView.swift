@@ -7,13 +7,38 @@
 
 import SwiftUI
 
+enum Sport : String {
+    case NCAAF = "americanfootball_ncaaf"
+    case NFL = "americanfootball_nfl"
+    case NBA = "basketball_nba"
+}
+
 struct HomeView: View {
     @State private var games: [Game] = []
     @State private var isSettingsPresented = false
+    @State private var sportSelection = Sport.NFL.rawValue
+    let dateFormatter = DateFormatter()
+    func getDate(_ date : Date) -> String {
+        dateFormatter.dateFormat = "MMM d, h:mm a"
+        return dateFormatter.string(from: date)
+    }
+    
     
     var body: some View {
         NavigationView {
             VStack {
+                Picker("", selection: $sportSelection) {
+                    Text("NCAAF")
+                        .tag(Sport.NCAAF.rawValue)
+                    Text("NFL")
+                        .tag(Sport.NFL.rawValue)
+                    Text("NBA")
+                        .tag(Sport.NBA.rawValue)
+                    
+                }
+                .onChange(of: sportSelection) { newValue in
+                    fetchData()
+                }
                 if games.isEmpty {
                     ProgressView()
                 } else {
@@ -21,11 +46,11 @@ struct HomeView: View {
                         NavigationLink(destination: GameView(game: game)) {
                             HStack {
                                 VStack(alignment: .leading) {
-                                    Text("Sport: \(game.sportTitle)")
-                                    Text("Home: \(game.homeTeam)")
-                                    Text("Away: \(game.awayTeam)")
+                                    Text(game.homeTeam)
+                                    Text(game.awayTeam)
                                 }
                                 Spacer()
+                                Text(getDate(game.commenceTime))
                             }
                             .padding()
                         }
@@ -39,15 +64,12 @@ struct HomeView: View {
             .navigationTitle("Game Odds")
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
-                    Button(action: {
-                        isSettingsPresented = true
-                    }) {
+                    NavigationLink {
+                        SettingsView()
+                    } label: {
                         Image(systemName: "gear")
                     }
                 }
-            }
-            .sheet(isPresented: $isSettingsPresented) {
-                Text("Hello")
             }
         }
     }
@@ -56,14 +78,13 @@ struct HomeView: View {
         
         print("Starting Fetch ToDos")
         let API_KEY = "0dc43c2b159a9a895f510afd0d163eb0"
-        let BASE_URL = "https://api.the-odds-api.com/v4/sports/americanfootball_ncaaf/odds/"
-        let SPORT = "americanfootball_ncaaf"
+        let BASE_URL = "https://api.the-odds-api.com/v4/sports/\(sportSelection)/odds/"
         let REGIONS = "us"
         let MARKETS = "h2h"
         let ODDS_FORMAT = "decimal"
         let DATE_FORMAT = "iso"
         
-        let urlString = "\(BASE_URL)?api_key=\(API_KEY)&sport=\(SPORT)&regions=\(REGIONS)&markets=\(MARKETS)&oddsFormat=\(ODDS_FORMAT)&dateFormat=\(DATE_FORMAT)"
+        let urlString = "\(BASE_URL)?api_key=\(API_KEY)&regions=\(REGIONS)&markets=\(MARKETS)&oddsFormat=\(ODDS_FORMAT)&dateFormat=\(DATE_FORMAT)"
         print(urlString)
         
         guard let url = URL(string: urlString) else {

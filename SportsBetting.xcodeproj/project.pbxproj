@@ -10,7 +10,13 @@
 		F42AFF972B26C5870028E14D /* SportsBettingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42AFF962B26C5870028E14D /* SportsBettingApp.swift */; };
 		F42AFF9B2B26C5890028E14D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F42AFF9A2B26C5890028E14D /* Assets.xcassets */; };
 		F42AFF9F2B26C5890028E14D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F42AFF9E2B26C5890028E14D /* Preview Assets.xcassets */; };
-		F42AFFA62B26C5EA0028E14D /* Models in Resources */ = {isa = PBXBuildFile; fileRef = F42AFFA52B26C5EA0028E14D /* Models */; };
+		F42AFFB02B26C8AA0028E14D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42AFFAF2B26C8AA0028E14D /* ContentView.swift */; };
+		F42AFFB22B26C8B40028E14D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42AFFB12B26C8B40028E14D /* HomeView.swift */; };
+		F42AFFB42B26C8BC0028E14D /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42AFFB32B26C8BC0028E14D /* GameView.swift */; };
+		F42AFFB62B26C8C70028E14D /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42AFFB52B26C8C70028E14D /* Game.swift */; };
+		F4B0D3ED2B3A403D00B34CAA /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B0D3EC2B3A403D00B34CAA /* Functions.swift */; };
+		F4B0D3EF2B3A457C00B34CAA /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B0D3EE2B3A457C00B34CAA /* SettingsView.swift */; };
+		F4B0D3F12B3A544A00B34CAA /* AppearanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B0D3F02B3A544A00B34CAA /* AppearanceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,10 +25,13 @@
 		F42AFF9A2B26C5890028E14D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F42AFF9C2B26C5890028E14D /* SportsBetting.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SportsBetting.entitlements; sourceTree = "<group>"; };
 		F42AFF9E2B26C5890028E14D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		F42AFFA52B26C5EA0028E14D /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Models; path = "../../../Desktop/xcode/SwiftUI sports betting app/SwiftUI sports betting app/Models"; sourceTree = "<group>"; };
-		F42AFFAC2B26C61A0028E14D /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
-		F42AFFAD2B26C61A0028E14D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		F42AFFAE2B26C61A0028E14D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F42AFFAF2B26C8AA0028E14D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F42AFFB12B26C8B40028E14D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		F42AFFB32B26C8BC0028E14D /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		F42AFFB52B26C8C70028E14D /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		F4B0D3EC2B3A403D00B34CAA /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		F4B0D3EE2B3A457C00B34CAA /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		F4B0D3F02B3A544A00B34CAA /* AppearanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,12 +64,17 @@
 		F42AFF952B26C5870028E14D /* SportsBetting */ = {
 			isa = PBXGroup;
 			children = (
+				F4B0D3EC2B3A403D00B34CAA /* Functions.swift */,
+				F42AFFAF2B26C8AA0028E14D /* ContentView.swift */,
+				F42AFFB12B26C8B40028E14D /* HomeView.swift */,
+				F42AFFB32B26C8BC0028E14D /* GameView.swift */,
+				F42AFFB52B26C8C70028E14D /* Game.swift */,
+				F4B0D3EE2B3A457C00B34CAA /* SettingsView.swift */,
 				F42AFF962B26C5870028E14D /* SportsBettingApp.swift */,
-				F42AFFA52B26C5EA0028E14D /* Models */,
-				F42AFFAB2B26C61A0028E14D /* Views */,
 				F42AFF9A2B26C5890028E14D /* Assets.xcassets */,
 				F42AFF9C2B26C5890028E14D /* SportsBetting.entitlements */,
 				F42AFF9D2B26C5890028E14D /* Preview Content */,
+				F4B0D3F02B3A544A00B34CAA /* AppearanceManager.swift */,
 			);
 			path = SportsBetting;
 			sourceTree = "<group>";
@@ -71,16 +85,6 @@
 				F42AFF9E2B26C5890028E14D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		F42AFFAB2B26C61A0028E14D /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				F42AFFAC2B26C61A0028E14D /* GameView.swift */,
-				F42AFFAD2B26C61A0028E14D /* HomeView.swift */,
-				F42AFFAE2B26C61A0028E14D /* ContentView.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,7 +145,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F42AFFA62B26C5EA0028E14D /* Models in Resources */,
 				F42AFF9F2B26C5890028E14D /* Preview Assets.xcassets in Resources */,
 				F42AFF9B2B26C5890028E14D /* Assets.xcassets in Resources */,
 			);
@@ -154,7 +157,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4B0D3EF2B3A457C00B34CAA /* SettingsView.swift in Sources */,
+				F42AFFB22B26C8B40028E14D /* HomeView.swift in Sources */,
+				F42AFFB62B26C8C70028E14D /* Game.swift in Sources */,
+				F42AFFB02B26C8AA0028E14D /* ContentView.swift in Sources */,
+				F42AFFB42B26C8BC0028E14D /* GameView.swift in Sources */,
+				F4B0D3F12B3A544A00B34CAA /* AppearanceManager.swift in Sources */,
 				F42AFF972B26C5870028E14D /* SportsBettingApp.swift in Sources */,
+				F4B0D3ED2B3A403D00B34CAA /* Functions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

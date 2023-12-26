@@ -30,10 +30,10 @@ struct GameView: View {
                         .padding(.bottom, 2)
                     
                     // Display odds for home team
-                    Text("\(homeOutcome.name): \(String(format: "%.02f", homeOutcome.price))")
+                    Text("\(homeOutcome.name): \(decimalToAmericanOdds(homeOutcome.price))")
                     
                     // Display odds for away team
-                    Text("\(awayOutcome.name): \(String(format: "%.02f", awayOutcome.price))")
+                    Text("\(awayOutcome.name): \(decimalToAmericanOdds(awayOutcome.price))")
                         .padding(.bottom, 4)
                     
                     
